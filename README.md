@@ -1,4 +1,4 @@
-# Vaultura - Personal Finance :smile:
+# Vaultura - Personal Finance Web App :smile:
 
 Minimalist personal finance app that gives you one source of truth for net worth, cash flow, and investments.
 
