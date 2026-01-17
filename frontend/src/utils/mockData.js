@@ -13,11 +13,13 @@ export const mockNetWorth = {
 };
 
 export const mockNetWorthHistory = [
-  { date: '2024-01-01', value: 265000 },
-  { date: '2024-01-05', value: 268500 },
-  { date: '2024-01-10', value: 271200 },
-  { date: '2024-01-15', value: 274800 },
-  { date: '2024-01-16', value: 287500 }
+  { date: '2023-12-01', value: 245000, month: 'Dec' },
+  { date: '2023-12-15', value: 250000, month: 'Dec' },
+  { date: '2024-01-01', value: 265000, month: 'Jan' },
+  { date: '2024-01-05', value: 268500, month: 'Jan' },
+  { date: '2024-01-10', value: 271200, month: 'Jan' },
+  { date: '2024-01-15', value: 274800, month: 'Jan' },
+  { date: '2024-01-16', value: 287500, month: 'Jan' }
 ];
 
 export const mockAssetAllocation = {

@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Dashboard from './components/Dashboard';
 import Navigation from './components/Navigation';
+
+// Import pages
+import DashboardPage from './pages/DashboardPage';
+import AccountsPage from './pages/AccountsPage';
+import InvestmentsPage from './pages/InvestmentsPage';
+import InsightsPage from './pages/InsightsPage';
+import SettingsPage from './pages/SettingsPage';
+import NewsPage from './pages/NewsPage';
 
 function App() {
   const [backendStatus, setBackendStatus] = useState('unknown');
@@ -15,10 +23,19 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Navigation backendStatus={backendStatus} />
-      <Dashboard backendStatus={backendStatus} />
-    </div>
+    <Router>
+      <div className="app">
+        <Navigation backendStatus={backendStatus} />
+        <Routes>
+          <Route path="/" element={<DashboardPage backendStatus={backendStatus} />} />
+          <Route path="/accounts" element={<AccountsPage backendStatus={backendStatus} />} />
+          <Route path="/investments" element={<InvestmentsPage backendStatus={backendStatus} />} />
+          <Route path="/insights" element={<InsightsPage backendStatus={backendStatus} />} />
+          <Route path="/settings" element={<SettingsPage backendStatus={backendStatus} />} />
+          <Route path="/news" element={<NewsPage backendStatus={backendStatus} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
